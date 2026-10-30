@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<addon id="repository.kudykam.povplus" version="0.1.0" name="POV+ Repository" provider-name="kudykam">
+  <extension point="xbmc.addon.repository" name="POV+ Repository">
+    <dir minversion="19.0.0">
+      <info compressed="false">https://raw.githubusercontent.com/kudykam/pov-plus/main/docs/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/kudykam/pov-plus/main/docs/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/kudykam/pov-plus/main/docs/</datadir>
+    </dir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Personal POV+ update repository</summary>
+    <description lang="en_GB">Independent GPL-3.0 fork. Experimental build; not affiliated with upstream POV.</description>
+    <license>GPL-3.0-only</license>
+  </extension>
+</addon>

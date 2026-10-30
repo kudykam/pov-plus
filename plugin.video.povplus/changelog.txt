@@ -1,0 +1,116 @@
+  plugin.video.povplus 6.10.16+ (POV) can be used directly as an external source
+  for other addons that are compatible with the original FenomScrapers.
+
+  [COLOR dodgerblue][B]Version 6.10[/B][/COLOR]
+* Refactored to fix Kodi 22 Piers log warnings.
++ Added Recently Watched Episodes to TV Shows menu, requires check for new items.
++ Added torrentfunk, torrentgalaxy, therargb, animetosho.
+* Changed subtitles, no api key needed.
+
+  [COLOR dodgerblue][B]Version 6.09[/B][/COLOR]
+* Trakt/MDBList changes.
+* Added knaben, removed bitsearch.
+
+  [COLOR dodgerblue][B]Version 6.08[/B][/COLOR]
+- Removed "Contrast" results displays.
++ Added MDBList stats to Account Info.
+* Changed Easynews scraper to use seas_ep_filter like other cloud scrapers.
+* Changed AIOStreams behavior, allowing internal debrid cloud scrapers to run
+  only when "Check Before Full Search" is enabled.
++ Added AIOStreams to Settings/Sources, see Help in settings.
++ Added separate states for Movies/TV Shows for Watchlist Sort Type.
++ Added MDBList Calendar, shares Settings/My Lists/Calendar.
++ Added support for seasons and episodes in MDBList lists.
++ Added Trending This Week TMDB Movies/TV Shows in case Trakt revokes client_id.
+- Removed torboxnews.  TorBox to completely remove search api.
+
+  [COLOR dodgerblue][B]Version 6.07[/B][/COLOR]
+* Legacy code for MDBList apikey will soon be removed in favor of MDBList OAuth
+  authorization.  Re-authorization now is recommended to keep functionality.
+* Changed to MDBList OAuth authorization.
++ Added My Services/TorBox Cloud/Add or Remove Airlock to folders context menu.
++ Added Airlock to Cloud to context menu for TorBox cached results.
++ Added Settings/Features/Smart Play/Play Next Episode From TV Shows.
+  When enabled, directly from the TV Shows Menu the addon will skip season browse and
+  attempt to source the "Next Episode" from watched history or S01E01 if no
+  watched history.  When enabled a Browse option is added to the Options... context menu.
++ Added bitsearch.
+
+  [COLOR dodgerblue][B]Version 6.06[/B][/COLOR]
+- Changed cloud scrapers to "Filter Results with Aliases".
+- Used AI to tune some of the regex patterns.
+- Added introdb.app / theintrodb.org integration to Next Episodes.
+- Pack downloader preselects all files.
+- Refactored downloader for TorBox.
+- Refactored datetime parsing.
+
+  [COLOR dodgerblue][B]Version 6.05[/B][/COLOR]
+- Added Settings/Metadata/Preferred Content Rating Region, defaults to US.
+  Requires manual Clear Meta Cache after setting change.
+- Changed subtitles provider to SubMaker - https://submaker.elfhosted.com.
+  Submaker requires complete manifest url in settings, i.e. https://.../manifest.json
+- Added temporary Settings/My Lists/Trakt/Limit Trakt Requests.
+  Enforces impending api change mandating 250 maximum.  Disabled by default.
+- Updated torboxnews.  Users api key will be passed through TorBox whitelisted project.
+  Do not use torboxnews if you have concerns about api key security.
+- Fix for format change in mediafusion results, next time will just remove it.
+- Updated MDBList pagination.
+- Added Limit Resolve Attempts (0 Limits to Selected Source) to Settings/Playback.
+- Fix for Easynews authorization.
+- Added Discover languages: Indonesian, Malay, Thai, Vietnamese.
+- Added temporary Settings/My Lists/Trakt/Reverse Added/Released Sort Direction.
+  Requires manual Clear Trakt Cache after setting change.
+- Removed higlighting for TMDBList private lists.
+- Change for Real Debrid infringing_file.
+- Updated Trakt/TMDBList pagination.
+- Added Dropped TV Shows for local tracking.
+  Access Dropped TV Shows from Favorites menu.
+  Toggle Dropped from TV Shows Options... menu.
+- Changed default instances for comet/torz, seems more stable.
+- Updated Offcloud api: delete folder from cloud.
+
+  [COLOR dodgerblue][B]Version 6.04[/B][/COLOR]
+- Re-added trakt_official_status at users request.
+- Fix for Real Debrid nonsense.
+- Changed subtitles search parameters: utf-8 only, added sources.
+- Subtitles require free api key from Wyzie Subs - https://sub.wyzie.io
+- Removed aiostreams.
+- Moved comet, mediafusion to standalone sources.
+- Removed sync_kodi_library_watchstatus.
+
+  [COLOR dodgerblue][B]Version 6.03[/B][/COLOR]
+- Added Recently Added/Random under Trakt Watchlist menu.
+- Fix for TMDB Lists Favorites, MDBList account info.
+- Extras updated thanks to pypi imdbinfo.
+- Removed easydebrid, fanarttv, folders scraper.
+- Added Blocks/Rounded-Blocks themes to RPDB options.
+- Added meteor.
+- Removed animetosho, prowlarr.
+
+  [COLOR dodgerblue][B]Version 6.02[/B][/COLOR]
+- Probable fix for Next Episode Window buttons with some skins.
+- Last attempt at subtitles decoding.
+- Added Trakt Favorites.
+- Updated torboxnews.
+- Added artwork change for non-English languages from Github request.
+- Added context menu sorting for single episode lists.
+- Moved torboxnews to internal scraper.
+- Updated MDBList with Dropped TV Shows.
+- Code cleanup.
+
+  [COLOR dodgerblue][B]Version 6.01[/B][/COLOR]
+- Updated MDBList.
+- Updated Offcloud.
+- Removed requests.adapters.Retry due to variable MDBList behavior.
+- Change for episode "specials" scraping.
+- Change for subtitles encoding.
+- Change for resume markings.
+- Changed aiostreams to include only comet/mediafusion, removed standalone sources.
+- Updated zilean.
+- Removed elfhosted, elfhosted has disabled direct options.
+- Removed some useless menu items, restore Movies/TV Shows to default.
+- Fixed AllDebrid thanks to some generous users.
+
+  [COLOR dodgerblue][B]CREDITS[/B][/COLOR]
+- Fen, Venom, Mr-Kodi.
+
