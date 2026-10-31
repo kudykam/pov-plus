@@ -1,4 +1,4 @@
-# Modified for POV+ by kudykam · 2026-10-30 · GPL-3.0-only
+# Modified for POV+ by kudykam · 2026-10-31 · GPL-3.0-only
 import time
 import urllib.parse
 from threading import Thread, Timer
@@ -544,11 +544,25 @@ class TMDbList:
 
 	def set(self):
 		if self.token: return self.clear()
+		if not (self.read or '').strip():
+			kodi_utils.dialog().ok('POV+ · TMDb',
+				'Nejprve vlož API Read Access Token do Nastavení POV+ → Metadata → Vlastní TMDb API Read Access Token. '
+				'Token získáš ve svém účtu na themoviedb.org/settings/api. '
+				'Pro filmový přehled stačí tento token; párování TMDbList je pouze pro osobní seznamy.')
+			return False
 
-		conn = http.connection_from_url('https://api.themoviedb.org', pool_kwargs={'headers': self.headers})
-		response = conn.request('post', '/4/auth/request_token')
-		result = response.json()
-		if not result['success']: return
+		try:
+			conn = http.connection_from_url('https://api.themoviedb.org', pool_kwargs={'headers': self.headers})
+			response = conn.request('post', '/4/auth/request_token')
+			result = response.json()
+		except Exception:
+			kodi_utils.dialog().ok('POV+ · TMDb', 'TMDb neodpovědělo platně. Ověř připojení a zkus párování znovu.')
+			return False
+		if response.status >= 400 or not isinstance(result, dict) or not result.get('success') or not result.get('request_token'):
+			kodi_utils.dialog().ok('POV+ · TMDb',
+				'TMDb nepovolilo párování (HTTP %s). Ověř API Read Access Token v nastavení Metadata. '
+				'Použij Read Access Token, nikoli API Key nebo heslo účtu.' % response.status)
+			return False
 		data = {'request_token': result['request_token']}
 		expires_in, expires_at = 600, 600 + time.monotonic()
 		url = 'https://www.themoviedb.org/auth/access?request_token=%s' % result['request_token']

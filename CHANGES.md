@@ -1,3 +1,8 @@
+# POV+ 0.1.2 · 31. 10. 2026
+
+- TMDbList při chybějícím API Read Access Tokenu vysvětlí nastavení Metadata. Chyba autorizace ani neplatná odpověď již neskončí tiše.
+- Uživatelské hlášky neobsahují tokeny ani obsah odpovědi služby.
+
 # POV+ 0.1.1 · 31. 10. 2026
 
 - Oprava generování odkazů: menu, přehrávání i akce nyní směřují na plugin.video.povplus. Dva obráceně zapsané řetězce z upstreamu odkazovaly na původní POV, což způsobovalo prázdnou novou položku a otevření původních seznamů.
