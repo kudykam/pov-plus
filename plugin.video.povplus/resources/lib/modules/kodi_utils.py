@@ -1,4 +1,4 @@
-# Modified for POV+ by kudykam · 2026-10-30 · GPL-3.0-only
+# Modified for POV+ by kudykam · 2026-10-31 · GPL-3.0-only
 import json
 import sqlite3 as database
 from urllib.parse import parse_qsl, urlencode, urlparse
@@ -158,7 +158,7 @@ def get_kodi_version():
 	return int(get_infolabel('System.BuildVersion')[0:2])
 
 def skin_location():
-	return 'vop.oediv.nigulp/snodda/emoh//:laiceps'[::-1]
+	return 'special://home/addons/plugin.video.povplus'
 
 def current_skin():
 	return xbmc.getSkinDir()
@@ -366,7 +366,7 @@ def set_view_mode(view_type, content='files', is_widget=None):
 	except: pass
 
 def build_url(url_params):
-	return f"{'/vop.oediv.nigulp//:nigulp'[::-1]}?{urlencode(url_params)}"
+	return "plugin://plugin.video.povplus/?%s" % urlencode(url_params)
 
 def add_dir(handle, url_params, list_name, iconImage=None, fanartImage=None, isFolder=True):
 	if 'new_page' in url_params: list_name = f"{list_name} >> {url_params['new_page']} <<"

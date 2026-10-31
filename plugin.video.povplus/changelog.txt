@@ -1,3 +1,7 @@
+POV+ 0.1.1 (2026-10-31)
+- Fix menu/action URLs pointing to original POV instead of POV+.
+- Fix custom window asset location. Restart Kodi after updating.
+
   plugin.video.povplus 6.10.16+ (POV) can be used directly as an external source
   for other addons that are compatible with the original FenomScrapers.
 

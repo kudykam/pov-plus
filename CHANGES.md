@@ -1,3 +1,10 @@
+# POV+ 0.1.1 · 31. 10. 2026
+
+- Oprava generování odkazů: menu, přehrávání i akce nyní směřují na plugin.video.povplus. Dva obráceně zapsané řetězce z upstreamu odkazovaly na původní POV, což způsobovalo prázdnou novou položku a otevření původních seznamů.
+- Cesta vlastních oken používá zdroje POV+ i bez nainstalovaného původního POV.
+- Regresní test generuje skutečnou URL menu a předává ji skutečnému routeru; kontroluje i umístění zdrojů oken.
+- Po aktualizaci restartuj Kodi, aby se odstranily staré adresy z paměti a obnovil Python runtime.
+
 # Změny POV+ · 30. 10. 2026
 
 - Změna ID doplňku, profilových cest a URL na plugin.video.povplus.

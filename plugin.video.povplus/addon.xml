@@ -1,5 +1,5 @@
-<!-- Modified for POV+ by kudykam, 2026-10-30. GPL v3. -->
-<addon id="plugin.video.povplus" version="0.1.0" name="POV+" provider-name="kudykam; based on kodifitzwell POV">
+<!-- Modified for POV+ by kudykam, 2026-10-31. GPL v3. -->
+<addon id="plugin.video.povplus" version="0.1.1" name="POV+" provider-name="kudykam; based on kodifitzwell POV">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 		<import addon="script.module.requests" />

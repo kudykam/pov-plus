@@ -1,6 +1,10 @@
-# POV+ pro Kodi · 0.1.0 (experimentální)
+# POV+ pro Kodi · 0.1.1 (experimentální)
 
 Samostatný fork POV 6.10.23 pro osobní použití. ID `plugin.video.povplus`, vlastní profil, cache, okna a nastavení. Lze instalovat vedle původního POV. Projekt je oddělený od domácího panelu, FilmWatch i Cometu na Orange Pi.
+
+## Oprava 0.1.1
+
+Verze 0.1.0 chybně směrovala odkazy do původního POV. Aktualizuj na 0.1.1 a restartuj Kodi. Není nutná nová instalace repozitáře ani mazání účtů.
 
 ## Co tato verze přidává
 
@@ -21,8 +25,8 @@ Volitelně lze v nastavení připojit vlastní **node-csfd-api** server (dokumen
 
 ## Instalace ze ZIPu nebo Kodi repozitáře
 
-1. Stáhni [instalátor Kodi repozitáře](https://raw.githubusercontent.com/kudykam/pov-plus/main/docs/repository.kudykam.povplus/repository.kudykam.povplus-0.1.0.zip), nainstaluj jej v Kodi přes **Instalovat ze ZIP souboru** a poté zvol **Instalovat z repozitáře → POV+ Repository → Doplňky videa → POV+**. Pro přímou instalaci lze stáhnout [ZIP doplňku](https://raw.githubusercontent.com/kudykam/pov-plus/main/docs/plugin.video.povplus/plugin.video.povplus-0.1.0.zip). Pokud máš distribuční balík, rozbal jej; v `dist/` je `plugin.video.povplus-0.1.0.zip` a `repository.kudykam.povplus-0.1.0.zip`.
-2. Přenes instalační ZIP do místa dostupného Kodi. V Kodi otevři **Doplňky → Instalovat ze ZIP souboru** a vyber `plugin.video.povplus-0.1.0.zip`. Pokud Kodi žádá povolení neznámých zdrojů, povoluješ tím instalaci vlastních doplňků.
+1. Stáhni [instalátor Kodi repozitáře](https://raw.githubusercontent.com/kudykam/pov-plus/main/docs/repository.kudykam.povplus/repository.kudykam.povplus-0.1.0.zip), nainstaluj jej v Kodi přes **Instalovat ze ZIP souboru** a poté zvol **Instalovat z repozitáře → POV+ Repository → Doplňky videa → POV+**. Pro přímou instalaci lze stáhnout [ZIP doplňku](https://raw.githubusercontent.com/kudykam/pov-plus/main/docs/plugin.video.povplus/plugin.video.povplus-0.1.1.zip). Pokud máš distribuční balík, rozbal jej; v `dist/` je `plugin.video.povplus-0.1.1.zip` a `repository.kudykam.povplus-0.1.0.zip`.
+2. Přenes instalační ZIP do místa dostupného Kodi. V Kodi otevři **Doplňky → Instalovat ze ZIP souboru** a vyber `plugin.video.povplus-0.1.1.zip`. Pokud Kodi žádá povolení neznámých zdrojů, povoluješ tím instalaci vlastních doplňků.
 3. V nastavení **Metadata** vlož vlastní **TMDb API Read Access Token**. Pro Trakt nastav vlastní **Client ID a Client Secret** registrované aplikace. Původní výchozí TMDb bearer token ani Trakt client secret z upstreamu tento fork nepublikuje. Párování zobrazí kód a adresu poskytovatele; autorizační kódy se neposílají externím QR službám ani zkracovačům URL. Real-Debrid používá původní veřejný device flow.
 4. Spusť **POV+**. V jeho nastavení → Accounts / My Services znovu autorizuj Real-Debrid a Trakt. Nepřenášej ani nesdílej `settings.xml` s účtovými tokeny.
 5. Nové volby jsou v poslední kategorii **POV+ · Český výběr**. Začni bez filtru hodnocení (0 %), ověř ČSFD u několika filmů a teprve potom nastav např. 70 %.
