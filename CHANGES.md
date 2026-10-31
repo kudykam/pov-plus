@@ -1,3 +1,9 @@
+# POV+ 0.1.3 · 31. 10. 2026
+
+- Nastavení Metadata nabízí načtení TMDb Read Access Tokenu z TXT souboru na disku, USB nebo dostupné síťové složce přes Kodi VFS.
+- Podpora UTF-8/BOM a UTF-16 souborů z Poznámkového bloku, koncového nového řádku a volitelného prefixu Bearer.
+- Chybný nebo nečitelný soubor nepřepíše stávající nastavení; token se nevypisuje do hlášek ani logů. Import sám neověřuje platnost na TMDb.
+
 # POV+ 0.1.2 · 31. 10. 2026
 
 - TMDbList při chybějícím API Read Access Tokenu vysvětlí nastavení Metadata. Chyba autorizace ani neplatná odpověď již neskončí tiše.

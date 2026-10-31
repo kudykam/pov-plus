@@ -1,4 +1,4 @@
-# Modified for POV+ by kudykam · 2026-10-30 · GPL-3.0-only
+# Modified for POV+ by kudykam · 2026-10-31 · GPL-3.0-only
 from datetime import datetime
 from threading import Thread
 from modules import kodi_utils, settings
@@ -8,6 +8,7 @@ get_property, set_property, clear_property = kodi_utils.get_property, kodi_utils
 get_setting, set_setting, make_settings_dict = kodi_utils.get_setting, kodi_utils.set_setting, kodi_utils.make_settings_dict
 
 POVPLUS_ROUTES = {
+    'povplus_import_tmdb': lambda p: _import('modules.povplus_credentials', 'import_tmdb_token')(p),
     'povplus_catalog': lambda p: _import('modules.povplus_catalog', 'catalog')(p),
     'povplus_filters': lambda p: _import('modules.povplus_catalog', 'filters')(p),
     'povplus_genres': lambda p: _import('modules.povplus_catalog', 'choose_genres')(p),

@@ -357,6 +357,7 @@
 		<setting label="TMDb" type="lsep" />
 		<setting id="image_resolutions" label="TMDb Image Resolution" type="enum" default="2" values="Low|Medium|High|Original" />
 		<setting id="tmdb_read_token" label="Vlastní TMDb API Read Access Token" type="text" default="" option="hidden" />
+		<setting id="povplus.import_tmdb" label="Načíst TMDb token z TXT souboru" type="action" action="RunPlugin(plugin://plugin.video.povplus/?mode=povplus_import_tmdb)" />
 		<!-- Trakt -->
 		<setting id="trakt.client_id" label="Vlastní Trakt Client ID" type="text" default="" option="hidden" />
 		<setting id="trakt.client_secret" label="Vlastní Trakt Client Secret" type="text" default="" option="hidden" />
